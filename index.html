@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Information Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-card">
+      <h3>Basic Customer Information</h3>
+      <div class="tabs"> 
+        <button class="tab active" onclick="showTab('customer-info')">Customer Info</button> 
+        <button class="tab" onclick="showTab('address-details')">Address Details</button> 
+        <button class="tab" onclick="showTab('product-interest')">Product Interest</button>
+      </div>
+    
+      <div class="tab-content active" id="customer-info">
+      <form>
+        <div class="input-group">
+          <label for="name">Name</label>
+          <div class="input-with-mic">
+            <input type="text" id="name" />
+            <button type="button" class="mic-btn"><img src="images/mic.png" alt="Mic" /></button>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group dob">
+            <label for="dob">DOB</label>
+            <div class="input-with-mic">
+              <input type="date" id="dob" />
+              <button type="button" class="mic-btn"><img src="images/mic.png" alt="Mic" /></button>
+            </div>
+          </div>
+          <div class="input-group age">
+            <label for="age">Age</label>
+            <div class="input-with-mic">
+              <input type="number" id="age" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="gender">Gender</label>
+          <div class="input-with-mic">
+            <select id="gender">
+              <option disabled selected></option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+            <button type="button" class="mic-btn"><img src="images/mic.png" alt="Mic" /></button>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="mobile">Mobile Number</label>
+          <div class="input-with-mic">
+            <input type="tel" id="mobile" />
+            <button type="button" class="mic-btn"><img src="images/mic.png" alt="Mic" /></button>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email ID</label>
+          <div class="input-with-mic">
+            <input type="email" id="email" />
+            <button type="button" class="mic-btn"><img src="images/mic.png" alt="Mic" /></button>
+          </div>
+        </div>
+
+        <button type="button" class="btn" onclick="showTab('address-details')">Next</button>
+      </form>
+    </div>
+
+     <!-- Address Details Section -->
+    <div class="tab-content" id="address-details">
+      <form>
+        <div class="input-group">
+          <label for="street">Street Address</label>
+          <div class="input-with-mic">
+            <input type="text" id="street" />
+            <button type="button" class="mic-btn" onclick="startDictation('street')">
+              <img src="images/mic.png" alt="Mic" />
+            </button>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="city">City</label>
+          <div class="input-with-mic">
+            <input type="text" id="city" />
+            <button type="button" class="mic-btn" onclick="startDictation('city')">
+              <img src="images/mic.png" alt="Mic" />
+            </button>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="state">State</label>
+          <div class="input-with-mic">
+            <input type="text" id="state" />
+            <button type="button" class="mic-btn" onclick="startDictation('state')">
+              <img src="images/mic.png" alt="Mic" />
+            </button>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="pincode">Pincode</label>
+          <div class="input-with-mic">
+            <input type="text" id="pincode" />
+            <button type="button" class="mic-btn" onclick="startDictation('pincode')">
+              <img src="images/mic.png" alt="Mic" />
+            </button>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn">Next</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Product Interest Section --> 
+     <div class="tab-content" id="product-interest"> 
+      <form> 
+
+        <div class="input-group">
+          <label for="interested-product">Interested Product</label>
+          <div class="input-with-mic">
+            <select id="interested-product">
+              <option disabled selected></option>
+              <option>Health Insurance</option>
+              <option>Life Insurance</option>
+              <option>Presonal Loan</option>
+              <option>Credit Card</option>
+            </select>
+            <button type="button" class="mic-btn" onclick="startDictation('interested-product')">
+              <img src="images/mic.png" alt="Mic" />
+            </button>
+          </div>
+        </div>
+          
+        <div class="input-group">
+          <label for="monthly-budget">Monthly Budget</label>
+          <div class="input-with-mic">
+            <input type="text" id="monthly-budget" />
+            <button type="button" class="mic-btn" onclick="startDictation('monthly-budget')">
+              <img src="images/mic.png" alt="Mic" />
+            </button>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="preferred-provider">Preferred Provider</label>
+          <div class="input-with-mic">
+            <select id="preferred-provider">
+              <option disabled selected></option>
+              <option>Star Health</option>
+              <option>HDFC Ergo</option>
+              <option>ICICI Lombard</option>
+              <option>LIC</option>
+            </select>
+            <button type="button" class="mic-btn" onclick="startDictation('preferred-provider')">
+              <img src="images/mic.png" alt="Mic" />
+            </button>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

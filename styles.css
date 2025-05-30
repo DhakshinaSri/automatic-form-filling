@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #67498C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.form-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: 3px solid #2e024930;
+  border-radius: 5px;
+  background: #f9f9f9;
+  color: #2e024930;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab.active {
+  background: #A91079;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+label {
+  font-size: 14px;
+  color: #2E024950;
+  text-align: left;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 3px solid #2E024930;
+  outline: none;
+  background-color: transparent;
+  color: #333;
+}
+
+input:focus,
+select:focus {
+  border-bottom-color: #A91079;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-row .input-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.input-with-mic {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-mic input,
+.input-with-mic select {
+  width: 100%;
+  padding-right: 2.5rem;
+  box-sizing: border-box;
+}
+
+.mic-btn {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #A91079;
+  cursor: pointer;
+}
+
+.btn {
+background-color: #A91079;
+color: white;
+padding: 15px 40px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 16px;
+margin-top: 10px;
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.btn:hover {
+  background-color: #7b1fa2;
+}
+
+.tab-content {
+display: none;
+}
+.tab-content.active {
+display: block;
+}
